@@ -144,7 +144,7 @@ def test_distribute(a: float, b: float, c: float) -> None:
     :math:`z \times (x + y) = z \times x + z \times y`
     """
     # TODO: Implement for Task 0.2.
-    assert mul(a, b + c) == (mul(a, b) + mul(a, c))
+    assert_close(mul(c, a + b), (mul(c, a) + mul(c, b)))
     # raise NotImplementedError('Need to implement for Task 0.2')
 
 
@@ -183,7 +183,8 @@ def test_sum_distribute(ls1: List[float], ls2: List[float]) -> None:
     is the same as the sum of each element of `ls1` plus each element of `ls2`.
     """
     # TODO: Implement for Task 0.3.
-    raise NotImplementedError('Need to implement for Task 0.3')
+    assert_close(sum(ls1) + sum(ls2), sum(addLists(ls1, ls2)))
+    # raise NotImplementedError('Need to implement for Task 0.3')
 
 
 @pytest.mark.task0_3
